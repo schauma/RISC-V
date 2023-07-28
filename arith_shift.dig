@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<circuit>
+  <version>1</version>
+  <attributes/>
+  <visualElements>
+    <visualElement>
+      <elementName>BarrelShifter</elementName>
+      <elementAttributes>
+        <entry>
+          <string>Label</string>
+          <string>Shift_Arith</string>
+        </entry>
+        <entry>
+          <string>Bits</string>
+          <int>32</int>
+        </entry>
+        <entry>
+          <string>barrelShifterMode</string>
+          <barrelShifterMode>arithmetic</barrelShifterMode>
+        </entry>
+        <entry>
+          <string>barrelSigned</string>
+          <boolean>true</boolean>
+        </entry>
+        <entry>
+          <string>direction</string>
+          <direction>right</direction>
+        </entry>
+      </elementAttributes>
+      <pos x="640" y="740"/>
+    </visualElement>
+    <visualElement>
+      <elementName>In</elementName>
+      <elementAttributes>
+        <entry>
+          <string>Label</string>
+          <string>Input</string>
+        </entry>
+        <entry>
+          <string>Bits</string>
+          <int>32</int>
+        </entry>
+        <entry>
+          <string>intFormat</string>
+          <intFormat>bin</intFormat>
+        </entry>
+      </elementAttributes>
+      <pos x="120" y="700"/>
+    </visualElement>
+    <visualElement>
+      <elementName>In</elementName>
+      <elementAttributes>
+        <entry>
+          <string>Label</string>
+          <string>Shift</string>
+        </entry>
+        <entry>
+          <string>Bits</string>
+          <int>32</int>
+        </entry>
+      </elementAttributes>
+      <pos x="120" y="780"/>
+    </visualElement>
+    <visualElement>
+      <elementName>Out</elementName>
+      <elementAttributes>
+        <entry>
+          <string>Label</string>
+          <string>Y</string>
+        </entry>
+        <entry>
+          <string>Bits</string>
+          <int>32</int>
+        </entry>
+        <entry>
+          <string>intFormat</string>
+          <intFormat>bin</intFormat>
+        </entry>
+      </elementAttributes>
+      <pos x="860" y="760"/>
+    </visualElement>
+    <visualElement>
+      <elementName>Splitter</elementName>
+      <elementAttributes>
+        <entry>
+          <string>Input Splitting</string>
+          <string>32</string>
+        </entry>
+        <entry>
+          <string>Output Splitting</string>
+          <string>0-6,7-31</string>
+        </entry>
+      </elementAttributes>
+      <pos x="200" y="780"/>
+    </visualElement>
+    <visualElement>
+      <elementName>Testcase</elementName>
+      <elementAttributes>
+        <entry>
+          <string>Testdata</string>
+          <testData>
+            <dataString>Input Shift Y
+
+loop(x,31)
+	loop(s, 32)
+		(1&lt;&lt;x) (s) ((1&lt;&lt;x)/1&gt;&gt;s)
+	end loop
+end loop</dataString>
+          </testData>
+        </entry>
+      </elementAttributes>
+      <pos x="100" y="560"/>
+    </visualElement>
+  </visualElements>
+  <wires>
+    <wire>
+      <p1 x="480" y="740"/>
+      <p2 x="640" y="740"/>
+    </wire>
+    <wire>
+      <p1 x="700" y="760"/>
+      <p2 x="860" y="760"/>
+    </wire>
+    <wire>
+      <p1 x="220" y="780"/>
+      <p2 x="640" y="780"/>
+    </wire>
+    <wire>
+      <p1 x="120" y="780"/>
+      <p2 x="200" y="780"/>
+    </wire>
+    <wire>
+      <p1 x="120" y="700"/>
+      <p2 x="480" y="700"/>
+    </wire>
+    <wire>
+      <p1 x="480" y="700"/>
+      <p2 x="480" y="740"/>
+    </wire>
+  </wires>
+  <measurementOrdering/>
+</circuit>

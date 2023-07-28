@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<truthTable>
+  <variables>
+    <variable name="A"/>
+    <variable name="B"/>
+    <variable name="C"/>
+    <variable name="D"/>
+    <variable name="E"/>
+  </variables>
+  <results>
+    <result>
+      <name>RegWrite</name>
+      <values class="BoolTable">1XXX1XXX0XXX1XXXXXXXXXXX0XX1XXXX</values>
+    </result>
+    <result>
+      <name>ImmSrc_1</name>
+      <values class="BoolTable">0XXX0XXX0XXXXXXXXXXXXXXX1XX1XXXX</values>
+    </result>
+    <result>
+      <name>ImmSrc_0</name>
+      <values class="BoolTable">0XXX0XXX1XXXXXXXXXXXXXXX0XX1XXXX</values>
+    </result>
+    <result>
+      <name>ALUSrc</name>
+      <values class="BoolTable">1XXX1XXX1XXX0XXXXXXXXXXX0XXXXXXX</values>
+    </result>
+    <result>
+      <name>MemWrite</name>
+      <values class="BoolTable">0XXX0XXX1XXX0XXXXXXXXXXX0XX0XXXX</values>
+    </result>
+    <result>
+      <name>ResultSrc_1</name>
+      <values class="BoolTable">0XXX0XXXXXXX0XXXXXXXXXXXXXX1XXXX</values>
+    </result>
+    <result>
+      <name>ResultSrc_0</name>
+      <values class="BoolTable">1XXX0XXXXXXX0XXXXXXXXXXXXXX0XXXX</values>
+    </result>
+    <result>
+      <name>Branch</name>
+      <values class="BoolTable">0XXX0XXX0XXX0XXXXXXXXXXX1XX0XXXX</values>
+    </result>
+    <result>
+      <name>ALUOp_1</name>
+      <values class="BoolTable">0XXX1XXX0XXX1XXXXXXXXXXX0XXXXXXX</values>
+    </result>
+    <result>
+      <name>ALUOp0</name>
+      <values class="BoolTable">0XXX0XXX0XXX0XXXXXXXXXXX1XXXXXXX</values>
+    </result>
+    <result>
+      <name>Jump</name>
+      <values class="BoolTable">XXXX0XXX0XXX0XXXXXXXXXXX0XX1XXXX</values>
+    </result>
+  </results>
+</truthTable>

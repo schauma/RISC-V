@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<truthTable>
+  <variables>
+    <variable name="op_6"/>
+    <variable name="op_5"/>
+    <variable name="op_4"/>
+    <variable name="op_3"/>
+    <variable name="op_2"/>
+  </variables>
+  <results>
+    <result>
+      <name>ImmSrc_1</name>
+      <values class="BoolTable">0XXX0XXX0XXXXXXXXXXXXXXX1XX1XXXX</values>
+    </result>
+    <result>
+      <name>ImmSrc_0</name>
+      <values class="BoolTable">0XXX0XXX1XXXXXXXXXXXXXXX0XX1XXXX</values>
+    </result>
+  </results>
+</truthTable>

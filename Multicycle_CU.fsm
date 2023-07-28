@@ -1,0 +1,229 @@
+<?xml version="1.0" encoding="utf-8"?>
+<fsm>
+  <states>
+    <state>
+      <values>AdrSrc = 0, IRWrite = 1, ALUSrcA = 00, ALUSrcB = 10, ALUOp = 00, ResultSrc  = 10 , PCUpdate = 1</values>
+      <position x="-300.0" y="-720.0"/>
+      <number>0</number>
+      <name>S0 Fetch</name>
+      <radius>70</radius>
+      <isInitial>true</isInitial>
+      <initialAngle>12</initialAngle>
+      <defaultDC>false</defaultDC>
+    </state>
+    <state>
+      <values>ALUSrcA = 01, ALUSrcB = 01, ALUOp = 00</values>
+      <position x="540.0" y="-660.0"/>
+      <number>1</number>
+      <name>S1 Decode</name>
+      <radius>70</radius>
+      <isInitial>false</isInitial>
+      <initialAngle>12</initialAngle>
+      <defaultDC>false</defaultDC>
+    </state>
+    <state>
+      <values>ALUSrcA = 10, ALUSrcB  = 01, ALUOp = 00</values>
+      <position x="-360.0" y="-120.0"/>
+      <number>2</number>
+      <name>S2 MemAdr</name>
+      <radius>70</radius>
+      <isInitial>false</isInitial>
+      <initialAngle>12</initialAngle>
+      <defaultDC>false</defaultDC>
+    </state>
+    <state>
+      <values>ALUSrcA= 10, ALUSrcB = 00,ALUOp = 10</values>
+      <position x="120.0" y="-180.0"/>
+      <number>6</number>
+      <name>S6 ExecuteR</name>
+      <radius>70</radius>
+      <isInitial>false</isInitial>
+      <initialAngle>12</initialAngle>
+      <defaultDC>false</defaultDC>
+    </state>
+    <state>
+      <values>ALUSrcA = 10, ALUSrcB  = 01, ALUOp = 10</values>
+      <position x="480.0" y="-120.0"/>
+      <number>8</number>
+      <name>S8 ExecuteI</name>
+      <radius>70</radius>
+      <isInitial>false</isInitial>
+      <initialAngle>12</initialAngle>
+      <defaultDC>false</defaultDC>
+    </state>
+    <state>
+      <values>ALUSrcA = 01, ALUSrcB = 10, ALUOp = 00, ResultSrc = 00, PCUpdate  = 1</values>
+      <position x="960.0" y="0.0"/>
+      <number>9</number>
+      <name>S9 JAL</name>
+      <radius>70</radius>
+      <isInitial>false</isInitial>
+      <initialAngle>12</initialAngle>
+      <defaultDC>false</defaultDC>
+    </state>
+    <state>
+      <values>ALUSrcA = 10, ALUSrcB = 00, ALUOp = 01, ResultSrc= 00, Branch = 1</values>
+      <position x="1740.0" y="-60.0"/>
+      <number>10</number>
+      <name>S10 BEQ</name>
+      <radius>70</radius>
+      <isInitial>false</isInitial>
+      <initialAngle>12</initialAngle>
+      <defaultDC>false</defaultDC>
+    </state>
+    <state>
+      <values>ResultSrc = 00, AdrSrc = 1</values>
+      <position x="-420.0" y="180.0"/>
+      <number>3</number>
+      <name>S3 MemRead</name>
+      <radius>70</radius>
+      <isInitial>false</isInitial>
+      <initialAngle>12</initialAngle>
+      <defaultDC>false</defaultDC>
+    </state>
+    <state>
+      <values>ResultSrc = 00,AdrSrc = 1, MemWrite  = 1</values>
+      <position x="60.0" y="600.0"/>
+      <number>5</number>
+      <name>S8 MemWrite</name>
+      <radius>70</radius>
+      <isInitial>false</isInitial>
+      <initialAngle>12</initialAngle>
+      <defaultDC>false</defaultDC>
+    </state>
+    <state>
+      <values>ResultSrc = 00, RegWrite = 1</values>
+      <position x="960.0" y="480.0"/>
+      <number>7</number>
+      <name>S7 ALUWB</name>
+      <radius>70</radius>
+      <isInitial>false</isInitial>
+      <initialAngle>12</initialAngle>
+      <defaultDC>false</defaultDC>
+    </state>
+    <state>
+      <values>ResultSrc = 01, RegWrite = 1</values>
+      <position x="-420.0" y="600.0"/>
+      <number>4</number>
+      <name>S4 MemWB</name>
+      <radius>70</radius>
+      <isInitial>false</isInitial>
+      <initialAngle>12</initialAngle>
+      <defaultDC>true</defaultDC>
+    </state>
+  </states>
+  <transitions>
+    <transition>
+      <values></values>
+      <position x="125.430275" y="-766.02386"/>
+      <fromState reference="../../../states/state"/>
+      <toState reference="../../../states/state[2]"/>
+      <condition></condition>
+    </transition>
+    <transition>
+      <values></values>
+      <position x="-16.14708" y="-566.9118"/>
+      <fromState reference="../../../states/state[2]"/>
+      <toState reference="../../../states/state[3]"/>
+      <condition>op_6 = 0 &amp; op_4= 0 &amp; op_3=0 &amp; op_2= 0</condition>
+    </transition>
+    <transition>
+      <values></values>
+      <position x="-398.84616" y="28.230766"/>
+      <fromState reference="../../../states/state[3]"/>
+      <toState reference="../../../states/state[8]"/>
+      <condition>op_5 = 0</condition>
+    </transition>
+    <transition>
+      <values></values>
+      <position x="-155.84454" y="243.40932"/>
+      <fromState reference="../../../states/state[3]"/>
+      <toState reference="../../../states/state[9]"/>
+      <condition>op_5 = 1</condition>
+    </transition>
+    <transition>
+      <values></values>
+      <position x="-424.0" y="390.0"/>
+      <fromState reference="../../../states/state[8]"/>
+      <toState reference="../../../states/state[11]"/>
+      <condition></condition>
+    </transition>
+    <transition>
+      <values></values>
+      <position x="439.09155" y="278.42896"/>
+      <fromState reference="../../../states/state[4]"/>
+      <toState reference="../../../states/state[10]"/>
+      <condition></condition>
+    </transition>
+    <transition>
+      <values></values>
+      <position x="679.3239" y="212.54086"/>
+      <fromState reference="../../../states/state[5]"/>
+      <toState reference="../../../states/state[10]"/>
+      <condition></condition>
+    </transition>
+    <transition>
+      <values></values>
+      <position x="1148.2913" y="240.0"/>
+      <fromState reference="../../../states/state[6]"/>
+      <toState reference="../../../states/state[10]"/>
+      <condition></condition>
+    </transition>
+    <transition>
+      <values></values>
+      <position x="867.53796" y="-846.0265"/>
+      <fromState reference="../../../states/state[7]"/>
+      <toState reference="../../../states/state"/>
+      <condition></condition>
+    </transition>
+    <transition>
+      <values></values>
+      <position x="59.14749" y="164.39514"/>
+      <fromState reference="../../../states/state[10]"/>
+      <toState reference="../../../states/state"/>
+      <condition></condition>
+    </transition>
+    <transition>
+      <values></values>
+      <position x="-641.47766" y="82.221176"/>
+      <fromState reference="../../../states/state[9]"/>
+      <toState reference="../../../states/state"/>
+      <condition></condition>
+    </transition>
+    <transition>
+      <values></values>
+      <position x="-740.8668" y="-94.62425"/>
+      <fromState reference="../../../states/state[11]"/>
+      <toState reference="../../../states/state"/>
+      <condition></condition>
+    </transition>
+    <transition>
+      <values></values>
+      <position x="221.74724" y="-514.7212"/>
+      <fromState reference="../../../states/state[2]"/>
+      <toState reference="../../../states/state[4]"/>
+      <condition>op_6 = 0 &amp; op_5= 1 &amp; op_4= 1 &amp; op_3=0 &amp; op_2= 0</condition>
+    </transition>
+    <transition>
+      <values></values>
+      <position x="493.46588" y="-391.83713"/>
+      <fromState reference="../../../states/state[2]"/>
+      <toState reference="../../../states/state[5]"/>
+      <condition>op_6 = 0 &amp; op_5= 0 &amp; op_4= 1 &amp; op_3=0 &amp; op_2= 0</condition>
+    </transition>
+    <transition>
+      <values></values>
+      <position x="1141.7999" y="-363.59998"/>
+      <fromState reference="../../../states/state[2]"/>
+      <toState reference="../../../states/state[7]"/>
+      <condition>op_6 = 1 &amp; op_5= 1 &amp; op_4= 0 &amp; op_3=0 &amp; op_2= 0</condition>
+    </transition>
+    <transition>
+      <values></values>
+      <position x="758.5412" y="-335.4353"/>
+      <fromState reference="../../../states/state[2]"/>
+      <toState reference="../../../states/state[6]"/>
+      <condition>op_6 = 1 &amp; op_5= 1 &amp; op_4= 0 &amp; op_3=1 &amp; op_2=1</condition>
+    </transition>
+  </transitions>
+</fsm>

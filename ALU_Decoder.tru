@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<truthTable>
+  <variables>
+    <variable name="func3_2"/>
+    <variable name="func3_1"/>
+    <variable name="func3_0"/>
+    <variable name="op_5"/>
+    <variable name="func7_5"/>
+  </variables>
+  <results>
+    <result>
+      <name>ALUControl_2</name>
+      <values class="BoolTable">00001111111111111111000000000000</values>
+    </result>
+    <result>
+      <name>ALUControl_1</name>
+      <values class="BoolTable">00001111000000001111000011111111</values>
+    </result>
+    <result>
+      <name>ALUControl_0</name>
+      <values class="BoolTable">00010000111100001110000011110000</values>
+    </result>
+  </results>
+</truthTable>
