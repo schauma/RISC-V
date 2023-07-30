@@ -64,10 +64,6 @@
           <string>lastDataFile</string>
           <file>/home/max/Documents/Logisim/test.hex</file>
         </entry>
-        <entry>
-          <string>autoReload</string>
-          <boolean>true</boolean>
-        </entry>
       </elementAttributes>
       <pos x="1480" y="160"/>
     </visualElement>
