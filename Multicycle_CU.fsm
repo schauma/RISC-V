@@ -12,7 +12,7 @@
       <defaultDC>false</defaultDC>
     </state>
     <state>
-      <values>ALUSrcA = 01, ALUSrcB = 01, ALUOp = 00</values>
+      <values>ALUSrcA = 01, ALUSrcB = 01, ALUOp = 00, PCWrite = 0, IRWrite = 0</values>
       <position x="540.0" y="-660.0"/>
       <number>1</number>
       <name>S1 Decode</name>
@@ -33,7 +33,7 @@
     </state>
     <state>
       <values>ALUSrcA= 10, ALUSrcB = 00,ALUOp = 10</values>
-      <position x="120.0" y="-180.0"/>
+      <position x="180.0" y="-180.0"/>
       <number>6</number>
       <name>S6 ExecuteR</name>
       <radius>70</radius>
@@ -73,7 +73,7 @@
     </state>
     <state>
       <values>ResultSrc = 00, AdrSrc = 1</values>
-      <position x="-420.0" y="180.0"/>
+      <position x="-120.0" y="240.0"/>
       <number>3</number>
       <name>S3 MemRead</name>
       <radius>70</radius>
@@ -83,7 +83,7 @@
     </state>
     <state>
       <values>ResultSrc = 00,AdrSrc = 1, MemWrite  = 1</values>
-      <position x="60.0" y="600.0"/>
+      <position x="-480.0" y="180.0"/>
       <number>5</number>
       <name>S8 MemWrite</name>
       <radius>70</radius>
@@ -93,7 +93,7 @@
     </state>
     <state>
       <values>ResultSrc = 00, RegWrite = 1</values>
-      <position x="960.0" y="480.0"/>
+      <position x="360.0" y="300.0"/>
       <number>7</number>
       <name>S7 ALUWB</name>
       <radius>70</radius>
@@ -102,7 +102,7 @@
       <defaultDC>false</defaultDC>
     </state>
     <state>
-      <values>ResultSrc = 01, RegWrite = 1</values>
+      <values>ResultSrc = 01, RegWrite = 1, PCUpdate = 0</values>
       <position x="-420.0" y="600.0"/>
       <number>4</number>
       <name>S4 MemWB</name>
@@ -122,49 +122,49 @@
     </transition>
     <transition>
       <values></values>
-      <position x="-16.14708" y="-566.9118"/>
+      <position x="-16.14714" y="-566.91187"/>
       <fromState reference="../../../states/state[2]"/>
       <toState reference="../../../states/state[3]"/>
       <condition>op_6 = 0 &amp; op_4= 0 &amp; op_3=0 &amp; op_2= 0</condition>
     </transition>
     <transition>
       <values></values>
-      <position x="-398.84616" y="28.230766"/>
+      <position x="-264.27264" y="76.18176"/>
       <fromState reference="../../../states/state[3]"/>
       <toState reference="../../../states/state[8]"/>
       <condition>op_5 = 0</condition>
     </transition>
     <transition>
       <values></values>
-      <position x="-155.84454" y="243.40932"/>
+      <position x="-442.2414" y="21.103447"/>
       <fromState reference="../../../states/state[3]"/>
       <toState reference="../../../states/state[9]"/>
       <condition>op_5 = 1</condition>
     </transition>
     <transition>
       <values></values>
-      <position x="-424.0" y="390.0"/>
+      <position x="-378.41956" y="329.6504"/>
       <fromState reference="../../../states/state[8]"/>
       <toState reference="../../../states/state[11]"/>
       <condition></condition>
     </transition>
     <transition>
       <values></values>
-      <position x="439.09155" y="278.42896"/>
+      <position x="232.25996" y="74.15251"/>
       <fromState reference="../../../states/state[4]"/>
       <toState reference="../../../states/state[10]"/>
       <condition></condition>
     </transition>
     <transition>
       <values></values>
-      <position x="679.3239" y="212.54086"/>
+      <position x="421.5849" y="90.45283"/>
       <fromState reference="../../../states/state[5]"/>
       <toState reference="../../../states/state[10]"/>
       <condition></condition>
     </transition>
     <transition>
       <values></values>
-      <position x="1148.2913" y="240.0"/>
+      <position x="699.60004" y="229.20001"/>
       <fromState reference="../../../states/state[6]"/>
       <toState reference="../../../states/state[10]"/>
       <condition></condition>
@@ -178,14 +178,14 @@
     </transition>
     <transition>
       <values></values>
-      <position x="59.14749" y="164.39514"/>
+      <position x="-162.07005" y="-85.71938"/>
       <fromState reference="../../../states/state[10]"/>
       <toState reference="../../../states/state"/>
       <condition></condition>
     </transition>
     <transition>
       <values></values>
-      <position x="-641.47766" y="82.221176"/>
+      <position x="-716.9231" y="-335.3846"/>
       <fromState reference="../../../states/state[9]"/>
       <toState reference="../../../states/state"/>
       <condition></condition>
@@ -199,21 +199,21 @@
     </transition>
     <transition>
       <values></values>
-      <position x="221.74724" y="-514.7212"/>
+      <position x="225.97328" y="-520.52"/>
       <fromState reference="../../../states/state[2]"/>
       <toState reference="../../../states/state[4]"/>
       <condition>op_6 = 0 &amp; op_5= 1 &amp; op_4= 1 &amp; op_3=0 &amp; op_2= 0</condition>
     </transition>
     <transition>
       <values></values>
-      <position x="493.46588" y="-391.83713"/>
+      <position x="493.466" y="-391.8371"/>
       <fromState reference="../../../states/state[2]"/>
       <toState reference="../../../states/state[5]"/>
       <condition>op_6 = 0 &amp; op_5= 0 &amp; op_4= 1 &amp; op_3=0 &amp; op_2= 0</condition>
     </transition>
     <transition>
       <values></values>
-      <position x="1141.7999" y="-363.59998"/>
+      <position x="1141.7999" y="-363.59982"/>
       <fromState reference="../../../states/state[2]"/>
       <toState reference="../../../states/state[7]"/>
       <condition>op_6 = 1 &amp; op_5= 1 &amp; op_4= 0 &amp; op_3=0 &amp; op_2= 0</condition>
