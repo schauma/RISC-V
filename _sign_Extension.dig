@@ -134,6 +134,10 @@
           <string>Bits</string>
           <int>32</int>
         </entry>
+        <entry>
+          <string>intFormat</string>
+          <intFormat>decSigned</intFormat>
+        </entry>
       </elementAttributes>
       <pos x="1640" y="560"/>
     </visualElement>

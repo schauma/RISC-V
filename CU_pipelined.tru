@@ -30,11 +30,11 @@
     </result>
     <result>
       <name>ResultSrc_1</name>
-      <values class="BoolTable">0XXX0XXXXXXX0XXXXXXXXXXXXXX1XXXX</values>
+      <values class="BoolTable">0XXX0XXXXXXX0XXXXXXXXXXX0XX1XXXX</values>
     </result>
     <result>
       <name>ResultSrc_0</name>
-      <values class="BoolTable">1XXX0XXXXXXX0XXXXXXXXXXXXXX0XXXX</values>
+      <values class="BoolTable">1XXX0XXXXXXX0XXXXXXXXXXX0XX0XXXX</values>
     </result>
     <result>
       <name>Branch</name>

@@ -23,6 +23,10 @@
           <string>Label</string>
           <string>Clock</string>
         </entry>
+        <entry>
+          <string>Frequency</string>
+          <int>10</int>
+        </entry>
       </elementAttributes>
       <pos x="1060" y="-580"/>
     </visualElement>
@@ -779,16 +783,6 @@
       <pos x="-200" y="100"/>
     </visualElement>
     <visualElement>
-      <elementName>Not</elementName>
-      <elementAttributes/>
-      <pos x="1360" y="-600"/>
-    </visualElement>
-    <visualElement>
-      <elementName>Reset</elementName>
-      <elementAttributes/>
-      <pos x="560" y="420"/>
-    </visualElement>
-    <visualElement>
       <elementName>And</elementName>
       <elementAttributes>
         <entry>
@@ -813,6 +807,35 @@
         </entry>
       </elementAttributes>
       <pos x="900" y="-620"/>
+    </visualElement>
+    <visualElement>
+      <elementName>Const</elementName>
+      <elementAttributes/>
+      <pos x="560" y="420"/>
+    </visualElement>
+    <visualElement>
+      <elementName>Not</elementName>
+      <elementAttributes/>
+      <pos x="1220" y="-680"/>
+    </visualElement>
+    <visualElement>
+      <elementName>Tunnel</elementName>
+      <elementAttributes>
+        <entry>
+          <string>rotation</string>
+          <rotation rotation="2"/>
+        </entry>
+        <entry>
+          <string>NetName</string>
+          <string>CLK</string>
+        </entry>
+      </elementAttributes>
+      <pos x="1140" y="-680"/>
+    </visualElement>
+    <visualElement>
+      <elementName>LED</elementName>
+      <elementAttributes/>
+      <pos x="1340" y="-680"/>
     </visualElement>
   </visualElements>
   <wires>
@@ -982,10 +1005,6 @@
     </wire>
     <wire>
       <p1 x="1220" y="-600"/>
-      <p2 x="1360" y="-600"/>
-    </wire>
-    <wire>
-      <p1 x="1400" y="-600"/>
       <p2 x="1420" y="-600"/>
     </wire>
     <wire>
@@ -1055,6 +1074,14 @@
     <wire>
       <p1 x="1420" y="-360"/>
       <p2 x="1520" y="-360"/>
+    </wire>
+    <wire>
+      <p1 x="1260" y="-680"/>
+      <p2 x="1340" y="-680"/>
+    </wire>
+    <wire>
+      <p1 x="1140" y="-680"/>
+      <p2 x="1220" y="-680"/>
     </wire>
     <wire>
       <p1 x="220" y="360"/>

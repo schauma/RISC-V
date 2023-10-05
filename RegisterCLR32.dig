@@ -19,6 +19,10 @@
       <string>Height</string>
       <int>2</int>
     </entry>
+    <entry>
+      <string>skipHDL</string>
+      <boolean>true</boolean>
+    </entry>
   </attributes>
   <visualElements>
     <visualElement>
@@ -42,6 +46,10 @@
           <string>Bits</string>
           <int>32</int>
         </entry>
+        <entry>
+          <string>InDefault</string>
+          <value v="5" z="false"/>
+        </entry>
       </elementAttributes>
       <pos x="200" y="220"/>
     </visualElement>
@@ -52,6 +60,10 @@
           <string>Label</string>
           <string>CLK</string>
         </entry>
+        <entry>
+          <string>InDefault</string>
+          <value v="1" z="false"/>
+        </entry>
       </elementAttributes>
       <pos x="200" y="300"/>
     </visualElement>
@@ -61,6 +73,10 @@
         <entry>
           <string>Label</string>
           <string>en</string>
+        </entry>
+        <entry>
+          <string>InDefault</string>
+          <value v="1" z="false"/>
         </entry>
       </elementAttributes>
       <pos x="200" y="340"/>
@@ -75,6 +91,10 @@
         <entry>
           <string>Bits</string>
           <int>32</int>
+        </entry>
+        <entry>
+          <string>intFormat</string>
+          <intFormat>hex</intFormat>
         </entry>
       </elementAttributes>
       <pos x="680" y="300"/>
