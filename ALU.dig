@@ -52,7 +52,7 @@
         </entry>
         <entry>
           <string>intFormat</string>
-          <intFormat>dec</intFormat>
+          <intFormat>decSigned</intFormat>
         </entry>
         <entry>
           <string>InDefault</string>
