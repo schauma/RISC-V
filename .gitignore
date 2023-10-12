@@ -1,0 +1,26 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.db
+*.sqlite3
+*.log
+
+# PyCharm
+.idea/
+*.iml
+
+# Virtual Environment
+venv/
+env/
+__venv__/
+
+# Compiled Python files
+*.pyc
+
+# OS or Editor files
+.DS_Store
+Thumbs.db
+.vscode/
+
