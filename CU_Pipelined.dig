@@ -1037,11 +1037,11 @@
       <elementAttributes>
         <entry>
           <string>Input Splitting</string>
-          <string>1,1</string>
+          <string>1,1,1</string>
         </entry>
         <entry>
           <string>Output Splitting</string>
-          <string>2</string>
+          <string>3</string>
         </entry>
       </elementAttributes>
       <pos x="2720" y="880"/>
@@ -1275,7 +1275,7 @@
         </entry>
         <entry>
           <string>Bits</string>
-          <int>2</int>
+          <int>3</int>
         </entry>
         <entry>
           <string>Inputs</string>
@@ -1334,6 +1334,86 @@ declare opcode = Instruction&amp;0x7F;
         </entry>
       </elementAttributes>
       <pos x="2680" y="260"/>
+    </visualElement>
+    <visualElement>
+      <elementName>Const</elementName>
+      <elementAttributes>
+        <entry>
+          <string>Value</string>
+          <long>0</long>
+        </entry>
+      </elementAttributes>
+      <pos x="2700" y="920"/>
+    </visualElement>
+    <visualElement>
+      <elementName>Tunnel</elementName>
+      <elementAttributes>
+        <entry>
+          <string>rotation</string>
+          <rotation rotation="2"/>
+        </entry>
+        <entry>
+          <string>NetName</string>
+          <string>func3_0</string>
+        </entry>
+      </elementAttributes>
+      <pos x="2260" y="-800"/>
+    </visualElement>
+    <visualElement>
+      <elementName>Tunnel</elementName>
+      <elementAttributes>
+        <entry>
+          <string>rotation</string>
+          <rotation reference="../../../../visualElement[113]/elementAttributes/entry/rotation"/>
+        </entry>
+        <entry>
+          <string>NetName</string>
+          <string>func3_1</string>
+        </entry>
+      </elementAttributes>
+      <pos x="2280" y="-780"/>
+    </visualElement>
+    <visualElement>
+      <elementName>Tunnel</elementName>
+      <elementAttributes>
+        <entry>
+          <string>rotation</string>
+          <rotation reference="../../../../visualElement[113]/elementAttributes/entry/rotation"/>
+        </entry>
+        <entry>
+          <string>NetName</string>
+          <string>func3_2</string>
+        </entry>
+      </elementAttributes>
+      <pos x="2300" y="-760"/>
+    </visualElement>
+    <visualElement>
+      <elementName>Splitter</elementName>
+      <elementAttributes>
+        <entry>
+          <string>Input Splitting</string>
+          <string>1,1,1</string>
+        </entry>
+        <entry>
+          <string>Output Splitting</string>
+          <string>3</string>
+        </entry>
+      </elementAttributes>
+      <pos x="2360" y="-800"/>
+    </visualElement>
+    <visualElement>
+      <elementName>Out</elementName>
+      <elementAttributes>
+        <entry>
+          <string>Label</string>
+          <string>func3</string>
+        </entry>
+        <entry>
+          <string>Inputs</string>
+          <int>1</int>
+        </entry>
+      </elementAttributes>
+      <pos x="2480" y="-800"/>
     </visualElement>
   </visualElements>
   <wires>
@@ -1408,6 +1488,10 @@ declare opcode = Instruction&amp;0x7F;
     <wire>
       <p1 x="1380" y="-140"/>
       <p2 x="1480" y="-140"/>
+    </wire>
+    <wire>
+      <p1 x="2280" y="-780"/>
+      <p2 x="2360" y="-780"/>
     </wire>
     <wire>
       <p1 x="900" y="1420"/>
@@ -1494,6 +1578,10 @@ declare opcode = Instruction&amp;0x7F;
       <p2 x="1420" y="920"/>
     </wire>
     <wire>
+      <p1 x="2700" y="920"/>
+      <p2 x="2720" y="920"/>
+    </wire>
+    <wire>
       <p1 x="2760" y="280"/>
       <p2 x="2780" y="280"/>
     </wire>
@@ -1520,6 +1608,14 @@ declare opcode = Instruction&amp;0x7F;
     <wire>
       <p1 x="1380" y="-160"/>
       <p2 x="1480" y="-160"/>
+    </wire>
+    <wire>
+      <p1 x="2260" y="-800"/>
+      <p2 x="2360" y="-800"/>
+    </wire>
+    <wire>
+      <p1 x="2380" y="-800"/>
+      <p2 x="2480" y="-800"/>
     </wire>
     <wire>
       <p1 x="1380" y="1440"/>
@@ -1944,6 +2040,10 @@ declare opcode = Instruction&amp;0x7F;
     <wire>
       <p1 x="2640" y="-120"/>
       <p2 x="2680" y="-120"/>
+    </wire>
+    <wire>
+      <p1 x="2300" y="-760"/>
+      <p2 x="2360" y="-760"/>
     </wire>
     <wire>
       <p1 x="1260" y="1400"/>

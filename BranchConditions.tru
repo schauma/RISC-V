@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<truthTable>
+  <variables>
+    <variable name="func3_2"/>
+    <variable name="func3_1"/>
+    <variable name="func3_0"/>
+    <variable name="carry"/>
+    <variable name="negative"/>
+    <variable name="overflow"/>
+    <variable name="zero"/>
+  </variables>
+  <results>
+    <result>
+      <name>Y</name>
+      <values class="BoolTable">01010101010101011010101010101010XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX0011110000111100110000111100001111111111000000000000000011111111</values>
+    </result>
+  </results>
+</truthTable>

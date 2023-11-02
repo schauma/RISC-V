@@ -1,6 +1,4 @@
 #!/usr/bin/python3
-
-
 import copy
 from instr_conv import *
 import sys

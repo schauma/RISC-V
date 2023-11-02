@@ -44,7 +44,7 @@
         </entry>
         <entry>
           <string>Bits</string>
-          <int>2</int>
+          <int>3</int>
         </entry>
       </elementAttributes>
       <pos x="440" y="460"/>
@@ -110,7 +110,7 @@
       <elementAttributes>
         <entry>
           <string>Selector Bits</string>
-          <int>2</int>
+          <int>3</int>
         </entry>
         <entry>
           <string>Bits</string>
@@ -139,7 +139,7 @@
           <intFormat>decSigned</intFormat>
         </entry>
       </elementAttributes>
-      <pos x="1640" y="560"/>
+      <pos x="1640" y="600"/>
     </visualElement>
     <visualElement>
       <elementName>Splitter</elementName>
@@ -299,10 +299,90 @@
       </elementAttributes>
       <pos x="940" y="720"/>
     </visualElement>
+    <visualElement>
+      <elementName>Splitter</elementName>
+      <elementAttributes>
+        <entry>
+          <string>Input Splitting</string>
+          <string>25</string>
+        </entry>
+        <entry>
+          <string>Output Splitting</string>
+          <string>4,20</string>
+        </entry>
+      </elementAttributes>
+      <pos x="960" y="1300"/>
+    </visualElement>
+    <visualElement>
+      <elementName>Splitter</elementName>
+      <elementAttributes>
+        <entry>
+          <string>Input Splitting</string>
+          <string>12,20</string>
+        </entry>
+        <entry>
+          <string>Output Splitting</string>
+          <string>32</string>
+        </entry>
+      </elementAttributes>
+      <pos x="1100" y="1300"/>
+    </visualElement>
+    <visualElement>
+      <elementName>Const</elementName>
+      <elementAttributes>
+        <entry>
+          <string>Value</string>
+          <long>0</long>
+        </entry>
+        <entry>
+          <string>Bits</string>
+          <int>12</int>
+        </entry>
+      </elementAttributes>
+      <pos x="1060" y="1300"/>
+    </visualElement>
+    <visualElement>
+      <elementName>Text</elementName>
+      <elementAttributes>
+        <entry>
+          <string>Description</string>
+          <string>U - Type</string>
+        </entry>
+      </elementAttributes>
+      <pos x="1000" y="1360"/>
+    </visualElement>
+    <visualElement>
+      <elementName>Text</elementName>
+      <elementAttributes>
+        <entry>
+          <string>Description</string>
+          <string>Last 25 bits. No op-code</string>
+        </entry>
+      </elementAttributes>
+      <pos x="280" y="600"/>
+    </visualElement>
+    <visualElement>
+      <elementName>Const</elementName>
+      <elementAttributes>
+        <entry>
+          <string>Value</string>
+          <long>0</long>
+        </entry>
+        <entry>
+          <string>Bits</string>
+          <int>32</int>
+        </entry>
+      </elementAttributes>
+      <pos x="1440" y="620"/>
+    </visualElement>
   </visualElements>
   <wires>
     <wire>
-      <p1 x="1460" y="580"/>
+      <p1 x="1460" y="640"/>
+      <p2 x="1480" y="640"/>
+    </wire>
+    <wire>
+      <p1 x="1380" y="580"/>
       <p2 x="1480" y="580"/>
     </wire>
     <wire>
@@ -354,16 +434,24 @@
       <p2 x="1040" y="680"/>
     </wire>
     <wire>
+      <p1 x="980" y="1320"/>
+      <p2 x="1100" y="1320"/>
+    </wire>
+    <wire>
       <p1 x="440" y="460"/>
       <p2 x="1500" y="460"/>
     </wire>
     <wire>
-      <p1 x="1400" y="560"/>
-      <p2 x="1480" y="560"/>
+      <p1 x="1440" y="620"/>
+      <p2 x="1460" y="620"/>
     </wire>
     <wire>
-      <p1 x="1520" y="560"/>
-      <p2 x="1640" y="560"/>
+      <p1 x="1460" y="620"/>
+      <p2 x="1480" y="620"/>
+    </wire>
+    <wire>
+      <p1 x="1360" y="560"/>
+      <p2 x="1480" y="560"/>
     </wire>
     <wire>
       <p1 x="960" y="880"/>
@@ -379,7 +467,7 @@
     </wire>
     <wire>
       <p1 x="1260" y="820"/>
-      <p2 x="1400" y="820"/>
+      <p2 x="1360" y="820"/>
     </wire>
     <wire>
       <p1 x="1000" y="820"/>
@@ -395,11 +483,35 @@
     </wire>
     <wire>
       <p1 x="1260" y="980"/>
-      <p2 x="1460" y="980"/>
+      <p2 x="1380" y="980"/>
     </wire>
     <wire>
       <p1 x="1060" y="980"/>
       <p2 x="1200" y="980"/>
+    </wire>
+    <wire>
+      <p1 x="700" y="1300"/>
+      <p2 x="960" y="1300"/>
+    </wire>
+    <wire>
+      <p1 x="1060" y="1300"/>
+      <p2 x="1100" y="1300"/>
+    </wire>
+    <wire>
+      <p1 x="1120" y="1300"/>
+      <p2 x="1400" y="1300"/>
+    </wire>
+    <wire>
+      <p1 x="1460" y="660"/>
+      <p2 x="1480" y="660"/>
+    </wire>
+    <wire>
+      <p1 x="1520" y="600"/>
+      <p2 x="1640" y="600"/>
+    </wire>
+    <wire>
+      <p1 x="1400" y="600"/>
+      <p2 x="1480" y="600"/>
     </wire>
     <wire>
       <p1 x="960" y="700"/>
@@ -422,12 +534,24 @@
       <p2 x="700" y="540"/>
     </wire>
     <wire>
-      <p1 x="1460" y="580"/>
-      <p2 x="1460" y="980"/>
+      <p1 x="1360" y="560"/>
+      <p2 x="1360" y="820"/>
     </wire>
     <wire>
-      <p1 x="1400" y="560"/>
-      <p2 x="1400" y="820"/>
+      <p1 x="1460" y="620"/>
+      <p2 x="1460" y="640"/>
+    </wire>
+    <wire>
+      <p1 x="1460" y="640"/>
+      <p2 x="1460" y="660"/>
+    </wire>
+    <wire>
+      <p1 x="1380" y="580"/>
+      <p2 x="1380" y="980"/>
+    </wire>
+    <wire>
+      <p1 x="1400" y="600"/>
+      <p2 x="1400" y="1300"/>
     </wire>
     <wire>
       <p1 x="1340" y="540"/>
@@ -444,6 +568,10 @@
     <wire>
       <p1 x="700" y="840"/>
       <p2 x="700" y="1000"/>
+    </wire>
+    <wire>
+      <p1 x="700" y="1000"/>
+      <p2 x="700" y="1300"/>
     </wire>
     <wire>
       <p1 x="700" y="540"/>

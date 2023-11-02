@@ -74,7 +74,7 @@
         </entry>
         <entry>
           <string>intFormat</string>
-          <intFormat>dec</intFormat>
+          <intFormat>decSigned</intFormat>
         </entry>
         <entry>
           <string>InDefault</string>
@@ -1388,10 +1388,10 @@
         <entry>
           <string>Description</string>
           <string>Output Flag
-1000 N Negative
-0100 Z Zero
-0010 C Carry
-0001 V Overflow</string>
+0001 N Negative
+0010 Z Zero
+0100 C Carry
+1000 V Overflow</string>
         </entry>
       </elementAttributes>
       <pos x="-1320" y="160"/>

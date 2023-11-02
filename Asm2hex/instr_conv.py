@@ -283,7 +283,7 @@ def conv_jump_reg_instr(instr: str, remains: str):
     pass
 
 
-def assemble(asm : str,file_name : str):
+def assemble(asm : list,file_name : str):
     f = open(f"{file_name}.hex","w")
 
     for number, line in enumerate(asm):
